@@ -7,6 +7,67 @@ description: "Learn how to Connect your Roblox Game to FleetPoint."
   <Step title="Download the FleetPoint Edition of the GTS Assets Spawner">
     First, you will need the FleetPoint Edition of the GTS Assets Spawner. Company Admins can do this on the "Overview" page in the dashboard. The person downloading the file must already own the GTS Assets Advanced Spawner. You can purchase it [here](https://www.roblox.com/games/115360702187804/GTS-Product-Hub).
 
-    You will only need to swap out the files that go in `ServerScriptService`. Make sure you confirm Models Location (inside of SpawnerConfig) is correct.
+    You will only need to swap out the files that go in `ServerScriptService`. Make sure you confirm that the Models Location (inside of SpawnerConfig) is correct.
+  </Step>
+  <Step title="Download the FleetPoint Game Development Kit (GDK)">
+    The GDK is how your Roblox Game connects with FleetPoint. Download it \[TBD\].
+
+    Once downloaded, import the file into RobloxStudio, and drop it in `ServerScriptService`.
+  </Step>
+  <Step title="GDK Pre-reqs">
+    You will need a couple things to configure the GDK.
+
+    1. Your Company's API Key
+    2. The Map ID of the Map you want to connect to
+
+    Company Admins can find the API key on the "Overview" page of your dashboard. Make sure to fully copy it. 
+
+    You can also find the Map ID on the manage maps page by click on the map. 
+  </Step>
+  <Step title="Import the API Key">
+    <Columns cols={2}>
+      <Column>
+        We utilize [Secrets](https://create.roblox.com/docs/cloud-services/secrets) to protect your API key.
+
+        #### Studio
+
+        To import your API key to Studio, go to <br />**File \> Experience Settings \> Security** and then add your API key as a local secret. Give it a name of `FleetPoint-API-Key` (case sensitive), paste your API key as the value, and set the domain to [api.fleetpointapp.com](http://api.fleetpointapp.com).
+
+        <Info>
+          This will only give Studio access to the secret, and won't persist in the published game.
+        </Info>
+      </Column>
+      <Column>
+        #### Published Game
+
+        To import your API key to a published game, go to the [Creator Dashboard](https://create.roblox.com/dashboard/creations), click on your game, and then click on Secrets. Give it a name of `FleetPoint-API-Key` (case sensitive), paste your API key as the value, and set the domain to [api.fleetpointapp.com](http://api.fleetpointapp.com).
+
+        <Info>
+          Secrets stored there will work in the published game, but will not work in Studio.
+        </Info>
+      </Column>
+    </Columns>
+  </Step>
+  <Step title="Configure the GDK">
+    After importing the GDK. There are a few settings to configure. 
+
+    The first, and most important one is the `MapId`. Ensure that is the correct Map ID, otherwise the GDK will throw an error when you start your game.
+
+    Next is the `RequireControlUnit` option. This is if you want to utilize the Control Unit in the buses. If so, you need to get the model and add it to the `Body` folder of your bus.
+
+    <Info>
+      MODEL COMING SOON! For now, just uncheck it.
+    </Info>
+
+    Last is the `InchesPerStud` option. This defaults to `10`, which matches the speed/unit conversion for buses. Roblox recommends `11.0236`. Just note that whatever number you configure there **should** match the number inside of your `Gauges_AC6` script for every bus.
+
+    <Frame>
+      ![Image](/images/image.png "Image")
+    </Frame>
+
+    Note that the number before the `/12` is the number of inches per stud. If you were to use `11.0236`, you will need to update the `scaling` to be `(11.0236/12) * (60/88)`.
+  </Step>
+  <Step title="You're ready to go!">
+    Now, you should be all good and ready to go!
   </Step>
 </Steps>

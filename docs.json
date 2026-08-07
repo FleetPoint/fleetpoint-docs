@@ -34,7 +34,17 @@
           "icon": "book-open-cover"
         }
       ]
-    }
+    },
+    "groups": [
+      {
+        "group": "Getting Started",
+        "pages": [
+          "index",
+          "quickstart",
+          "connect"
+        ]
+      }
+    ]
   },
   "logo": {
     "light": "https://fleetpointapp.com/assets/images/brand.png",
