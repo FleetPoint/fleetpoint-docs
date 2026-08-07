@@ -1,11 +1,11 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
-  "name": "Mintlify Starter Kit",
+  "theme": "maple",
+  "name": "FleetPoint",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#263fe2",
+    "light": "#263fe2",
+    "dark": "#263fe2"
   },
   "favicon": "/favicon.svg",
   "navigation": {
@@ -21,15 +21,10 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
+          "anchor": "Features",
+          "href": "https://fleetpointapp.com/features",
           "icon": "book-open-cover"
         },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
       ]
     }
   },
@@ -41,32 +36,26 @@
     "links": [
       {
         "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "href": "https://fleetpointapp.com/support"
       }
     ],
     "primary": {
       "type": "button",
       "label": "Dashboard",
-      "href": "https://app.mintlify.com"
+      "href": "https://fleetpointapp.com"
     }
   },
   "contextual": {
     "options": [
       "copy",
       "view",
-      "chatgpt",
-      "claude",
-      "perplexity",
-      "mcp",
-      "cursor",
       "vscode"
     ]
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "discord": "https://fleetpointapp.com/support",
+      "github": "https://github.com/FleetPoint/fleetpoint-docs",
     }
   }
 }
