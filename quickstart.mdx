@@ -1,47 +1,96 @@
 ---
 title: "Quickstart"
-description: "Begin with a guide on the fastest path to a successful outcome"
+description: "Quickly get started with FleetPoint! Learn how to create a map, import your fleet, and get setup!"
 ---
-
-Describe how someone begins using your product. What is the first thing they need to do? Are there any prerequisites?
-
-A quickstart should take someone from zero to using your product. They'll get a quick win and a sense of what they can accomplish.
 
 ## Prerequisites
 
 Before you begin, you must have:
 
-- Requirement one (for example, Node.js 18+, a free account, an API key)
-- Requirement two (for example, a compatible device, a compatible browser, a compatible operating system)
+- A Roblox Account with a group rank of at least 250.
 
 ## Get started
 
 <Steps>
-  <Step title="Install">
-    Describe how to install your product or sign up.
+  <Step title="Login">
+    Click Login with Roblox<br />
 
-    ```bash
-    npm install your-package
-    ```
+    <Frame>
+      ![Image](/images/image.png "Image")
+    </Frame>
+
+    From there, make sure you select the correct account and review the permissions it is asking from you.
+
+    <Frame>
+      ![Image](/images/image-1.png "Image")
+    </Frame>
+
+    <Frame>
+      ![Image](/images/image-2.png "Image")
+    </Frame>
+
+    After that, you will be redirected back to FleetPoint.
   </Step>
-  <Step title="Configure">
-    Describe any setup or configuration needed before first use.
+  <Step title="Create a Company">
+    Go ahead and choose your Roblox group to create a company for.<br />
 
-    ```bash
-    your-cli init
-    ```
+    <Frame>
+      ![Image](/images/image-3.png "Image")
+    </Frame>
+
+    Once selected, optionally name your first map, and select if you wish to be redirected to learn how to activate Prime after setup.
+
+    <Frame>
+      <img
+        src="/images/image-4.png"
+        alt="Image"
+        title="Image"
+      />
+    </Frame>
+
+    Then click submit.
+
+    <Info>
+      If you chose to activate Prime, you may see click on the manage subscriptions button to do so. You do not have to do it yet if you do not want to.
+
+      If you wish to activate a 14-day free trial, you must also handle that in the subscription manager. You may only activate a 14-day free trial if you have not previously had any free trial or Prime subscription.
+    </Info>
   </Step>
-  <Step title="Run it">
-    Show the first thing a user does to see it working.
+  <Step title="Configure your Map">
+    If you haven't created a map, do so now. Head to the "Manage Maps" page to create or configure your map. Once you get on your map's page, configure things such as the Map Image & Map Bounds, temporary assignments, and spawner configuration.
 
-    ```bash
-    your-cli start
-    ```
+    <Info>
+      See Setup Map Image for more information.
+    </Info>
+
+    As for your spawner configuration, you can either configure it manually or import your configuration if you had a GTS Spawner.
+
+    Install the [Spawner Data Exporter](https://create.roblox.com/store/asset/122199457306830/Spawner-Data-Exporter) plugin generously provided by the GTS Assets Team.
+
+    Once installed, open and select "Export SpawnerConfig"
+
+    <Frame>
+      ![Image](/images/image-5.png "Image")
+    </Frame>
+
+    Once complete, it will open a new file with the exported config. Copy (`CTRL + A & CTRL + C`) And then paste that into FleetPoint under "Import Spawner Configuration."
+
+    Ensure that the configuration is valid, and then click Import. **Make sure to save once you are done!**
+
+    <Frame>
+      ![Image](/images/image-6.png "Image")
+    </Frame>
+  </Step>
+  <Step title="Import your Fleet">
+    Using the same plugin, click on "Export Spawner Fleet Data," then copy the exported data and head over to the "Manage Fleet" page and click "Import Buses."
+
+    From there, paste what you copied and ensure it is a valid configuration. Then, select the map (and/or lot if you have an active Prime subscription) you want the buses to go to.
+  </Step>
+  <Step title="Connect your Roblox Game to FleetPoint">
+    Learn how to [Connect your Roblox Game to FleetPoint](/connect).
   </Step>
 </Steps>
 
 <Tip>
-  Give people a way to get help. This could be a link to a support page, a chat with a customer support agent, or a forum for your product.
-
-  Example: Need help? Reach out to us at [support@yourcompany.com](mailto:support@yourcompany.com).
+  Need help? Reach out to us at [https://fleetpointapp.com/support](https://fleetpointapp.com/support)
 </Tip>

@@ -66,5 +66,14 @@
       "discord": "https://fleetpointapp.com/support",
       "github": "https://github.com/FleetPoint/fleetpoint-docs"
     }
+  },
+  "banner": {
+    "content": "WIP: FleetPoint is still under development, and these pages may change!",
+    "type": "warning"
+  },
+  "errors": {
+    "404": {
+      "redirect": false
+    }
   }
 }
