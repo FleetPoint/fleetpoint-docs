@@ -20,7 +20,7 @@ description: "Learn how to Connect your Roblox Game to FleetPoint."
     1. Your Company's API Key
     2. The Map ID of the Map you want to connect to
 
-    Company Admins can find the API key on the "Overview" page of your dashboard. Make sure to fully copy it. 
+    Company Admins can find the API key on the "Overview" page of your dashboard. Make sure to fully copy it.
 
     You can also find the Map ID on the manage maps page by click on the map. 
   </Step>
@@ -31,7 +31,7 @@ description: "Learn how to Connect your Roblox Game to FleetPoint."
 
         #### Studio
 
-        To import your API key to Studio, go to <br />**File \> Experience Settings \> Security** and then add your API key as a local secret. Give it a name of `FleetPoint-API-Key` (case sensitive), paste your API key as the value, and set the domain to [api.fleetpointapp.com](http://api.fleetpointapp.com).
+        To import your API key to Studio, go to <br />**File \> Experience Settings \> Security** and then add your API key as a local secret. Give it a name of `FleetPoint_API_Key` (case sensitive), paste your API key as the value, and set the domain to [api.fleetpointapp.com](http://api.fleetpointapp.com).
 
         <Info>
           This will only give Studio access to the secret, and won't persist in the published game.
@@ -40,7 +40,7 @@ description: "Learn how to Connect your Roblox Game to FleetPoint."
       <Column>
         #### Published Game
 
-        To import your API key to a published game, go to the [Creator Dashboard](https://create.roblox.com/dashboard/creations), click on your game, and then click on Secrets. Give it a name of `FleetPoint-API-Key` (case sensitive), paste your API key as the value, and set the domain to [api.fleetpointapp.com](http://api.fleetpointapp.com).
+        To import your API key to a published game, go to the [Creator Dashboard](https://create.roblox.com/dashboard/creations), click on your game, and then click on Secrets. Give it a name of `FleetPoint_API_Key` (case sensitive), paste your API key as the value, and set the domain to [api.fleetpointapp.com](http://api.fleetpointapp.com).
 
         <Info>
           Secrets stored there will work in the published game, but will not work in Studio.
@@ -49,7 +49,7 @@ description: "Learn how to Connect your Roblox Game to FleetPoint."
     </Columns>
   </Step>
   <Step title="Configure the GDK">
-    After importing the GDK. There are a few settings to configure. 
+    After importing the GDK. There are a few settings to configure.
 
     The first, and most important one is the `MapId`. Ensure that is the correct Map ID, otherwise the GDK will throw an error when you start your game.
 
