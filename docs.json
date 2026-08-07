@@ -7,6 +7,14 @@
     "light": "#263fe2",
     "dark": "#263fe2"
   },
+  "background": {
+    "decoration": "grid"
+  },
+  "styling": {
+    "codeblocks": {
+      "theme": "github-dark"
+    }
+  },
   "favicon": "/favicon.svg",
   "navigation": {
     "pages": [
@@ -29,8 +37,9 @@
     }
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "https://fleetpointapp.com/assets/images/brand.png",
+    "dark": "https://fleetpointapp.com/assets/images/brand-white.png",
+    "href": "https://fleetpointapp.com"
   },
   "navbar": {
     "links": [
