@@ -1,0 +1,126 @@
+---
+title: "Maintenance Logs"
+description: "Log mechanical issues, track repairs, and resolve them with a passing inspection."
+icon: "wrench"
+---
+
+Maintenance Logs keep a record of every mechanical issue on your fleet, from the moment it's reported to the inspection that closes it out. Find it under **Fleet > Maintenance Logs**.
+
+<Info>
+  **Who can use it:** Mechanics and above. Available on every plan. On the Free plan, only the buses your plan covers are included. See [Plans](/plans).
+</Info>
+
+<Note>
+  **Screenshot needed:** The Maintenance Logs page with a mix of Open, Overdue, and Resolved records.
+</Note>
+
+## How a maintenance record works
+
+<Steps>
+  <Step title="An issue is reported">
+    A record opens when a mechanic logs an issue on the website, a player reports one in game, or the game detects a fault on its own.
+  </Step>
+  <Step title="Mechanics work on it">
+    Mechanics can add repairs, notes, mileage, and a due date while the record is open.
+  </Step>
+  <Step title="A mechanic inspection resolves it">
+    A record stays open until it passes a **mechanic inspection**. A passing inspection marks it **Resolved**. A failing one keeps it open so the work can continue.
+  </Step>
+</Steps>
+
+<Tip>
+  Records are resolved by an inspection rather than deleted, so you keep the full history of what went wrong and how it was fixed.
+</Tip>
+
+## Record statuses
+
+| Status | Meaning |
+| --- | --- |
+| **Open** | The issue hasn't been resolved yet. |
+| **Overdue** | The record is still open and its due date has passed. |
+| **Failed inspection** | The latest inspection on this record failed, so it's still open. |
+| **Resolved** | A mechanic inspection passed and closed the record. |
+
+## Finding records
+
+- Use **All**, **Open**, and **Resolved** to filter by status.
+- Search issues, repairs, notes, and bus numbers with the search box.
+- If your company has more than one map, filter by map with the map dropdown.
+
+Each bus's page also lists that bus's maintenance records.
+
+## Logging an issue
+
+<Steps>
+  <Step title="Open the form">
+    Click **Log Maintenance**.
+  </Step>
+  <Step title="Fill in the details">
+    - **Bus**: the bus with the issue.
+    - **Issue**: what's wrong, e.g. "Brakes squealing at low speed".
+    - **Repairs** (optional): what's been done so far.
+    - **Notes** (optional): anything else worth knowing.
+    - **Mileage** (optional): the bus's mileage at the time.
+    - **Due** (optional): the date the repair should be finished by. Open records past this date show as **Overdue**.
+  </Step>
+  <Step title="Save">
+    Click **Log**. The record opens immediately.
+  </Step>
+</Steps>
+
+<Note>
+  **Screenshot needed:** The Log Maintenance dialog filled in.
+</Note>
+
+## Editing a record
+
+Open records can be updated with **Edit Details** to change the issue, repairs, notes, mileage, or due date.
+
+## Resolving a record
+
+<Steps>
+  <Step title="Record an inspection">
+    On an open record, click **Record Inspection**.
+  </Step>
+  <Step title="Go through the mechanic checklist">
+    Mark each item **Pass** or **Fail**. Describe what's wrong on any failed item. Fill in **Repairs** to say what was done. It's required here.
+  </Step>
+  <Step title="Sign off">
+    Click **Submit Inspection**, then confirm on the **Sign Off Inspection** prompt that you personally performed the full inspection. Click **Sign & Submit**.
+  </Step>
+</Steps>
+
+If every checklist item passes, the record is resolved. If any item fails, the inspection is saved as failed and the record stays open.
+
+<Info>
+  Admins can turn off inspections from the website. When they do, records can only be resolved with the in-game tablet. See [Inspections](/fleet/inspections#website-inspections).
+</Info>
+
+<Note>
+  **Screenshot needed:** The Record Inspection dialog with the mechanic checklist, followed by the Sign Off Inspection prompt.
+</Note>
+
+## How long records are kept
+
+Open records are kept until they're resolved. Resolved records are kept for 7 days, or 6 months with an Extended History subscription. See [Plans](/plans#history).
+
+## Deleting a record
+
+Admins can delete a record with **Delete**. This permanently removes it. To close out a fixed issue, resolve it with an inspection instead so the history is kept.
+
+## Reports from your game
+
+When your game is [connected to FleetPoint](/connect), maintenance records can also open automatically:
+
+- **Player reports**: a player reporting a problem with a bus opens a record with their description.
+- **Detected faults**: a fault the game detects on its own opens a record. If the same fault is detected again while its record is still open, the existing record is updated instead of a duplicate being created.
+
+To prevent spam, each player can report up to **3 issues per bus per hour**. Players with the Mechanic role or higher aren't limited.
+
+<Info>
+  **Coming soon:** Mechanics will be able to resolve maintenance records from the in-game inspection tablet.
+</Info>
+
+## Taking buses out of service automatically
+
+Admins can have buses taken out of service automatically when a new issue is reported, and put back in service once the issue is resolved. This is set up from [Fleet Health settings](/fleet/fleet-health#settings).

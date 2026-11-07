@@ -1,0 +1,101 @@
+---
+title: "Manage Fleet"
+description: "View your buses, add or import them, and make changes to many buses at once."
+icon: "bus-school"
+---
+
+**Manage Fleet** lists every bus in your company. Everyone can open it from **Fleet > Manage Fleet**. Admins can add and import buses.
+
+<Note>
+  **Screenshot needed:** The Manage Fleet table with a few buses, showing each status.
+</Note>
+
+## The fleet table
+
+The table shows each bus's status, number, assigned driver, year, make, model, fuel type, and map and lot. Click a column header to sort, search by bus number, and click a row to open the [bus's page](/fleet/buses).
+
+| Status | Meaning |
+| --- | --- |
+| **In Service** | The bus can be driven. |
+| **Spare** | The bus is in service and kept as a spare. Spares are picked first when a driver needs a replacement bus. |
+| **Out of Service** | The bus can't be driven or spawned. |
+
+On the Free plan, only the buses your plan covers are shown. See [Plans](/plans).
+
+## Adding a bus
+
+Admins can click **Add Bus** to add a single bus.
+
+- **Vehicle**: Bus Number, Year, Make, Model, Fuel Type, and whether it's **In Service** and a **Spare**.
+- **Placement**: the Map, its Spawner Category, and optionally a Lot.
+- **Service Record** (Prime): Engine, Transmission, Mileage, and Engine Hours.
+- **Details**: the Assigned Driver's Roblox ID, the Bus Image ID, and the Model Asset ID the spawner spawns.
+- **Note** (Prime): without Prime, the note is set for you from the bus's year, make, and model.
+
+<Warning>
+  Tick **In Service** if the bus should be drivable right away. Otherwise it's added out of service.
+</Warning>
+
+A map's spawner needs at least one [spawner category](/maps/manage-maps#spawner-categories) before buses can be added to it.
+
+<Note>
+  **Screenshot needed:** The Add Bus dialog.
+</Note>
+
+## Importing buses
+
+If you used the GTS Assets Spawner, you can bring your whole fleet over at once.
+
+<Steps>
+  <Step title="Import the spawner configuration first">
+    Your map's spawner categories need to match your fleet's. [Import your spawner configuration](/maps/manage-maps#importing-a-spawner-configuration) onto the map before importing buses.
+  </Step>
+  <Step title="Export your fleet">
+    In Roblox Studio, use the [Spawner Data Exporter](https://create.roblox.com/store/asset/122199457306830/Spawner-Data-Exporter) plugin and choose **Export Spawner Fleet Data**. Copy everything it exports.
+  </Step>
+  <Step title="Paste it into FleetPoint">
+    Click **Import Buses** and paste it into **Spawner Configuration**. FleetPoint checks it and shows how its categories match up with your map's.
+  </Step>
+  <Step title="Choose where the buses go">
+    Choose the map, and optionally a lot (Prime) to park every imported bus in.
+  </Step>
+  <Step title="Import">
+    Click **Import**, then check your fleet afterwards.
+  </Step>
+</Steps>
+
+How the import reads your configuration:
+
+- Year, make, and model are read from each bus's model name, e.g. "2022 Blue Bird Vision". Buses without a year are given 1900, and you'll be warned so you can fix them.
+- Fuel type is guessed from the bus number. Check it after importing.
+- Whether each bus is in service, a spare, its assigned driver, image, model asset ID, cosmetics, and description (Prime) are copied over.
+- Buses whose numbers are already on the map are skipped, not updated.
+- Up to 500 buses can be imported at once.
+
+<Warning>
+  The import can get some things wrong. Always double-check your fleet after importing.
+</Warning>
+
+<Note>
+  **Screenshot needed:** The Import Buses dialog with a pasted configuration and the category preview.
+</Note>
+
+## Changing several buses at once
+
+Select buses with the checkboxes, then open the **⋯** menu in the table header.
+
+| Action | Minimum role |
+| --- | --- |
+| Put in service / Take out of service | Supervisor |
+| Unassign drivers | Supervisor |
+| Update year, make, model, or fuel type | Admin |
+| Update lot (buses on one map, Prime) | Admin |
+| Delete buses | Admin |
+
+Up to 500 buses can be changed at once. To delete buses, you'll need to type the confirmation shown, e.g. "I wish to delete 3 buses". Deleting buses also deletes their logs, maintenance records, and activity sessions.
+
+## Changing one bus
+
+Open the **⋯** menu on a row to update a bus's year, make, model, fuel type, or lot (Admin), take it in or out of service (Mechanic), unassign its driver (Supervisor), or copy its bus ID (everyone).
+
+For everything else, open the [bus's page](/fleet/buses).

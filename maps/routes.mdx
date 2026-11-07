@@ -1,0 +1,76 @@
+---
+title: "Manage Routes"
+description: "Create bus routes with stops, and choose who can add them."
+icon: "route"
+---
+
+Routes are the paths your buses run, made up of stops in order. Find them under **Maps > Manage Routes**.
+
+<Info>
+  Requires [Prime](/plans). Everyone can view routes. Who can add them depends on each map's policy.
+</Info>
+
+<Note>
+  **Screenshot needed:** The Manage Routes page with routes on a map, including one awaiting approval.
+</Note>
+
+## Who can add routes
+
+Admins choose who can add routes on each map with **Who can add routes**:
+
+| Policy | Who can add routes |
+| --- | --- |
+| **Supervisors and administrators only** (default) | Supervisors and admins. |
+| **Any driver** | Everyone. Routes go live straight away. |
+| **Any driver, with supervisor approval** | Everyone. A supervisor has to approve drivers' routes before they go live. |
+
+- Supervisors and admins can always add, change, and delete any route, and their routes go live straight away.
+- Drivers and mechanics can only change routes they made themselves. With approval required, they can't change a route once it's live, and any change sends it back for approval.
+
+## Creating a route
+
+<Steps>
+  <Step title="Start a route">
+    Click **Add Route** under the map.
+  </Step>
+  <Step title="Name and number it">
+    Enter a **Name** and a **Route Number** from 1 to 99,999. The route number is the tag a bus displays, and must be unique on the map. The next free number is filled in for you.
+  </Step>
+  <Step title="Add stops">
+    Add at least 2 stops, up to 250, in the order buses should follow them:
+
+    - **Free point**: drop a pin anywhere with the pin tool.
+    - **Point of interest**: click one of the map's [points of interest](/maps/manage-maps#points-of-interest) and choose **Add as stop**.
+    - **Lot**: stop at a [lot](/maps/lots)'s center. Only lots with bounds can be used.
+
+    Reorder stops with the arrows, or remove them with the trash icon.
+  </Step>
+  <Step title="Save">
+    Click **Add Route**.
+  </Step>
+</Steps>
+
+Stops at a point of interest or lot move with it. Dragging one of these stops turns it into a free point.
+
+<Warning>
+  If a point of interest is renamed or removed, or a lot is deleted or loses its bounds, the stops that used it are dropped the next time the route is saved.
+</Warning>
+
+<Info>
+  Free points need the map to have a [map image and bounds](/maps/manage-maps#map-image). Without them, stops can only be added from points of interest and lots.
+</Info>
+
+<Note>
+  **Screenshot needed:** The route editor with several stops on the map.
+</Note>
+
+## Approving routes
+
+When drivers' routes need approval, supervisors and admins see **Awaiting approval** on them, with two options:
+
+- **Approve** puts the route live.
+- **Request changes** sends it back to whoever made it, with an optional note. It shows **Changes requested** until they update it and send it back.
+
+## Deleting a route
+
+Click the trash icon on a route to delete it. It's deleted immediately.

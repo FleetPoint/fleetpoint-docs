@@ -1,0 +1,91 @@
+---
+title: "Buses"
+description: "Everything about a single bus: its driver, service status, temporary assignments, maintenance, and history."
+icon: "bus"
+---
+
+Click any bus in [Manage Fleet](/fleet/manage-fleet) to open its page. Everyone can view a bus. What you can change depends on your [role](/roles).
+
+<Note>
+  **Screenshot needed:** A bus's page, showing its details, driver, and vehicle logs.
+</Note>
+
+## What's on a bus's page
+
+- **Vehicle**: number, year, make, model, fuel type, and whether it's in service and a spare.
+- **Assigned Driver**: who drives the bus.
+- **Temporary Assignment**: whether the driver has been moved to another bus, or this bus is covering for another one.
+- **Placement**: its map, lot, and spawner category.
+- **Service Record** (Prime): engine, transmission, mileage, engine hours, and how many maintenance records and activity sessions it has.
+- **Assets**: its model asset ID, bus image ID, and cosmetics.
+- **Record**: when it was added and last updated, and its note.
+- **Maintenance** (Mechanic and above): the bus's [maintenance records](/fleet/maintenance-logs).
+- **Vehicle Logs**: the bus's 50 most recent log entries.
+
+## Taking a bus in or out of service
+
+Mechanics and above can click **Take Out of Service** or **Put In Service**.
+
+- An out-of-service bus can't be driven or spawned.
+- With Prime, taking a bus out of service moves its driver to another bus. See [Automatic reassignment](#automatic-reassignment).
+- Putting a bus back in service gives its driver back.
+
+<Info>
+  Buses can also be taken out of service automatically when an issue is reported. See [Fleet Health settings](/fleet/fleet-health#settings). Taking a bus out of service by hand means it stays out once its repairs are done.
+</Info>
+
+## Assigning a driver
+
+Supervisors and above can click **Assign Driver**, enter the driver's Roblox ID, click **Look up** to check it's the right person, and then **Assign**. Click **Unassign** to remove the driver.
+
+## Temporary assignments
+
+A temporary assignment moves a bus's driver onto another bus for a while. The driver is moved, not copied: their usual bus has no driver until the assignment ends.
+
+### Setting one up
+
+Supervisors and above can click **Temporary Reassignment** on the bus the driver normally drives.
+
+<Steps>
+  <Step title="Choose a bus">
+    Pick the **Bus to move them to**. Only buses on the same map that are in service, have no driver, and aren't already covering for another bus can be picked.
+  </Step>
+  <Step title="Choose when it ends">
+    Set the date the assignment **Ends on** and the time it ends **At**.
+  </Step>
+</Steps>
+
+The driver is moved back within 15 minutes of the end time. Click **End Now** on either bus to end it early.
+
+<Note>
+  **Screenshot needed:** The Temporary Assignment dialog.
+</Note>
+
+### Automatic reassignment
+
+With [Prime](/plans), when a bus goes out of service its driver is moved to a free bus on the same map:
+
+- Spares are picked first, then the bus with the lowest number.
+- The assignment has no end date. It ends when the original bus is back in service, and the driver goes back to it.
+- If the bus covering for it goes out of service too, the driver is moved again, and still goes back to their original bus.
+- If no bus is free, the driver stays assigned to the out-of-service bus.
+
+Automatic reassignment can be turned off for a map in its [map settings](/maps/manage-maps#map-settings).
+
+<Info>
+  If a timed assignment ends while the driver's usual bus is still out of service, the driver stays put until that bus is back in service.
+</Info>
+
+## Lots
+
+Admins with Prime can click **Assign Lot** to park the bus in one of its map's [lots](/maps/lots), or **Unassign** to take it out.
+
+## Editing a bus
+
+Admins can click **Edit** to change the bus's details, spawner category, model and image IDs, and, with Prime, its service record and note. Its lot, driver, and service status are changed with their own buttons.
+
+## Deleting a bus
+
+Admins can click **Delete** and type the bus number to confirm. This also deletes the bus's logs, maintenance records, and activity sessions.
+
+If a driver was temporarily moved off or onto this bus, they're sorted out first: a driver covering for another bus goes back to it, and a bus covering for this one keeps the driver.

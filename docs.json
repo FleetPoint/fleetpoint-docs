@@ -17,12 +17,53 @@
   },
   "favicon": "/favicon.svg",
   "navigation": {
-    "pages": [
+    "groups": [
       {
         "group": "Getting Started",
         "pages": [
           "index",
-          "quickstart"
+          "quickstart",
+          "connect",
+          "plans",
+          "roles"
+        ]
+      },
+      {
+        "group": "Guides",
+        "pages": [
+          "guides/handle-breakdowns",
+          "guides/set-up-inspections",
+          "guides/lay-out-your-map"
+        ]
+      },
+      {
+        "group": "Company",
+        "pages": [
+          "company/overview",
+          "company/subscriptions",
+          "company/partner-program",
+          "company/active"
+        ]
+      },
+      {
+        "group": "Fleet",
+        "pages": [
+          "fleet/manage-fleet",
+          "fleet/buses",
+          "fleet/activity-logs",
+          "fleet/replay",
+          "fleet/fleet-health",
+          "fleet/inspections",
+          "fleet/maintenance-logs"
+        ]
+      },
+      {
+        "group": "Maps",
+        "pages": [
+          "maps/manage-maps",
+          "maps/live-map",
+          "maps/lots",
+          "maps/routes"
         ]
       }
     ],
@@ -34,17 +75,7 @@
           "icon": "book-open-cover"
         }
       ]
-    },
-    "groups": [
-      {
-        "group": "Getting Started",
-        "pages": [
-          "index",
-          "quickstart",
-          "connect"
-        ]
-      }
-    ]
+    }
   },
   "logo": {
     "light": "https://fleetpointapp.com/assets/images/brand.png",

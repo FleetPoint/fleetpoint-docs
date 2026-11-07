@@ -1,0 +1,49 @@
+---
+title: "Handle a Breakdown"
+description: "From a reported problem to a bus back on the road, with as little manual work as possible."
+icon: "screwdriver-wrench"
+---
+
+This guide follows a bus from the moment something goes wrong to the moment it's fixed, and shows how to set FleetPoint up so most of it happens automatically.
+
+## Set it up once
+
+<Steps>
+  <Step title="Take broken buses out of service automatically">
+    As an admin, open [Fleet Health](/fleet/fleet-health), click **Settings**, and tick **Take buses out of service for new maintenance issues**.
+  </Step>
+  <Step title="Move drivers to a spare automatically (Prime)">
+    In each map's [settings](/maps/manage-maps#temporary-assignments), make sure **Automatic** is ticked under Temporary Assignments. Marking a few buses as **Spare** gives FleetPoint somewhere to move drivers first.
+  </Step>
+  <Step title="Choose who resolves issues">
+    Make sure your mechanics have the Mechanic role. See [Roles](/roles).
+  </Step>
+</Steps>
+
+## When something breaks
+
+<Steps>
+  <Step title="The issue is reported">
+    A player reports a problem in game, the game detects a fault, or a mechanic clicks **Log Maintenance** on the website. A [maintenance record](/fleet/maintenance-logs) opens.
+  </Step>
+  <Step title="The bus comes off the road">
+    The bus is taken out of service. With Prime, its driver is moved to a free bus on the same map, spares first.
+  </Step>
+  <Step title="Mechanics see what needs work">
+    The bus shows up on [Fleet Health](/fleet/fleet-health) under **Buses Needing Maintenance** (Prime) and in **Maintenance Logs** as **Open**. Set a **Due** date to keep track of when it should be fixed.
+  </Step>
+  <Step title="The repair is inspected">
+    Once it's fixed, a mechanic clicks **Record Inspection** on the record, goes through the mechanic checklist, and fills in what was repaired.
+  </Step>
+  <Step title="The bus goes back on the road">
+    If the inspection passes, the record is resolved. Once the bus has no other open records, it's put back in service and its driver goes back to it. If the inspection fails, the record stays open for more work.
+  </Step>
+</Steps>
+
+<Note>
+  **Image needed:** A diagram of this flow: issue reported → bus out of service and driver moved → inspection passes → bus back in service and driver returned.
+</Note>
+
+<Tip>
+  If you take a bus out of service by hand while it's being repaired, FleetPoint leaves it out of service after the repair. Put it back in service yourself when you're ready.
+</Tip>

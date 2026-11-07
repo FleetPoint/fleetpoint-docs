@@ -1,0 +1,97 @@
+---
+title: "Fleet Health"
+description: "See how much of your fleet is ready to drive, which buses need work, and which are due for inspection."
+icon: "heart-pulse"
+---
+
+Fleet Health gives you a single score for the condition of your fleet, broken down by map, along with the buses that need attention. Find it under **Fleet > Fleet Health**.
+
+<Info>
+  **Who can use it:** Mechanics and above. Admins can change its settings. The score and statistics are available on every plan. **Buses Needing Maintenance**, **Upcoming Inspections**, and overdue inspection tracking require [Prime](/plans).
+</Info>
+
+<Note>
+  **Screenshot needed:** The top of the Fleet Health page with the score and statistic cards.
+</Note>
+
+## Health score
+
+A bus is **healthy** when it's in service and has no open [maintenance records](/fleet/maintenance-logs). Your health score is the percentage of your buses that are healthy:
+
+| Grade | Score |
+| --- | --- |
+| **Great** | 90% or higher |
+| **Good** | 75% or higher |
+| **Fair** | 50% or higher |
+| **Poor** | Below 50% |
+
+Next to the score you'll find:
+
+- **Known Mechanical Issues**: the percentage of buses with open maintenance records.
+- **Out of Service**: the percentage of buses marked out of service.
+- **Healthy Buses**: how many buses are healthy.
+- **Overdue Inspections** (Prime): how many buses are past due for a mechanic inspection.
+
+On the Free plan, only the buses your plan covers are counted.
+
+## By map
+
+The **By Map** section shows the same breakdown for each map. In the chart, each bus is counted once:
+
+- Out of service.
+- Otherwise, in service with known issues.
+- Otherwise, healthy.
+
+The table below the chart lists each map's health and grade, the percentage with known issues and out of service, and its overdue inspections.
+
+<Note>
+  **Screenshot needed:** The By Map chart and table with two or more maps.
+</Note>
+
+## Buses needing maintenance
+
+Requires Prime. Lists every bus with open maintenance records, oldest first, with:
+
+- Its map and status. **Held for Maintenance** means it was taken out of service automatically (see [Settings](#settings)).
+- How many issues are open, and what they are.
+- When the oldest issue was opened, and the nearest due date.
+
+A calendar icon next to the bus number means the bus is also overdue for a mechanic inspection. Click a row to open the bus.
+
+<Note>
+  **Screenshot needed:** The Buses Needing Maintenance table, including a bus with the overdue inspection icon.
+</Note>
+
+## Upcoming inspections
+
+Requires Prime. Lists buses whose mechanic inspection is **Overdue** or due within the next 7 days, soonest first, with the date of each bus's last passing mechanic inspection.
+
+A bus's next mechanic inspection is due a set number of days after its last **passing** mechanic inspection. If it's never passed one, it's due that many days after it was added to FleetPoint. A failed inspection doesn't reset the clock.
+
+Nothing is tracked until an admin sets the number of days in [Settings](#settings).
+
+<Note>
+  **Screenshot needed:** The Upcoming Inspections table with an overdue and an upcoming bus.
+</Note>
+
+## Settings
+
+Admins can click **Settings** on the Fleet Health page to change:
+
+<AccordionGroup>
+  <Accordion title="Track upcoming mechanic inspections (Prime)">
+    Turn this on and set **Days between mechanic inspections** (1–365) to track when each bus is due for a mechanic inspection. This drives [Upcoming Inspections](#upcoming-inspections) and the overdue inspection count.
+  </Accordion>
+  <Accordion title="Take buses out of service for new maintenance issues">
+    When this is on, a bus is taken out of service as soon as a new maintenance issue is reported on it, from the website or from your game. It's put back in service once its last open record is resolved or deleted.
+
+    - If the bus was already out of service, it's left alone, so it won't be put back in service by a repair it wasn't taken out for.
+    - If someone changes the bus's status by hand in the meantime, it won't be put back in service automatically.
+    - With Prime, and with automatic temporary assignments turned on for the map, the bus's driver is moved to a free bus, just like taking it out of service by hand. When the bus returns to service, the driver goes back to it. See [Buses](/fleet/buses).
+    - Turning this on only affects issues reported afterwards. Buses with issues that are already open aren't taken out of service.
+  </Accordion>
+</AccordionGroup>
+
+<Note>
+  **Screenshot needed:** The Fleet Health Settings dialog.
+</Note>

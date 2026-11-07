@@ -1,0 +1,66 @@
+---
+title: "Roles & Permissions"
+description: "How your Roblox group ranks decide what each member can do in FleetPoint."
+icon: "user-shield"
+---
+
+Everyone in your company has one of four roles. Each role can do everything the roles below it can.
+
+| Role | What it's for |
+| --- | --- |
+| **Driver** | Opens the dashboard. Views the fleet, buses, active buses, and routes. |
+| **Mechanic** | Takes buses in and out of service, and works on maintenance, inspections, and fleet health. |
+| **Supervisor** | Assigns drivers, and views the live map, activity logs, and replays. |
+| **Admin** | Everything, including the fleet, maps, lots, settings, and subscriptions. |
+
+## How roles are assigned
+
+Roles come from your members' ranks in your Roblox group. Admins choose the minimum rank for each role on the company [Overview](/company/overview#roles) page:
+
+| Setting | Default |
+| --- | --- |
+| Minimum Driver Rank | 1 |
+| Minimum Mechanic Rank | 150 |
+| Minimum Supervisor Rank | 200 |
+| Minimum Admin Rank | 250 |
+
+A member gets the highest role their rank reaches. Members ranked below the Minimum Driver Rank can't open your company at all.
+
+FleetPoint checks ranks every time a page loads, so promoting or demoting someone in your Roblox group changes their role in FleetPoint right away.
+
+## What each role can access
+
+| Page | Minimum role | Plan |
+| --- | --- | --- |
+| [Overview](/company/overview) | Driver (admins see settings) | All |
+| [Subscriptions](/company/subscriptions) | Admin | All |
+| [Partner Program](/company/partner-program) | Admin | All |
+| [Active Drivers & Buses](/company/active) | Driver | All |
+| [Manage Fleet](/fleet/manage-fleet) | Driver | All |
+| [Fleet Activity Logs](/fleet/activity-logs) | Supervisor | All |
+| [Fleet Replay](/fleet/replay) | Supervisor | Prime |
+| [Fleet Health](/fleet/fleet-health) | Mechanic | All |
+| [Inspections](/fleet/inspections) | Mechanic | Prime |
+| [Maintenance Logs](/fleet/maintenance-logs) | Mechanic | All |
+| [Manage Maps](/maps/manage-maps) | Admin | All |
+| [Live Map View](/maps/live-map) | Supervisor | Prime |
+| [Manage Lots](/maps/lots) | Admin | Prime |
+| [Manage Routes](/maps/routes) | Driver | Prime |
+
+Pages your role can't open are hidden from the sidebar.
+
+## Common actions
+
+| Action | Minimum role |
+| --- | --- |
+| Take one bus in or out of service | Mechanic |
+| Take several buses in or out of service at once | Supervisor |
+| Assign, unassign, or temporarily reassign drivers | Supervisor |
+| Log, edit, and inspect maintenance records | Mechanic |
+| Delete maintenance records | Admin |
+| File inspections | Mechanic |
+| Edit inspection checklists and settings | Admin |
+| Add, import, edit, or delete buses | Admin |
+| Create and change maps, lots, and spawner settings | Admin |
+| Create routes | Depends on the map's [route creation policy](/maps/routes) |
+| Approve or reject routes | Supervisor |

@@ -1,0 +1,129 @@
+---
+title: "Inspections"
+description: "Run pre-trip, post-trip, and mechanic inspections with checklists you control."
+icon: "clipboard-check"
+---
+
+Inspections record that a bus was checked and what was found. Every inspection follows a checklist, and every checklist item is marked **Pass** or **Fail**. If any item fails, the whole inspection fails.
+
+Find past inspections and your company's checklists under **Fleet > Inspections**.
+
+<Info>
+  **Who can use it:** Mechanics and above. Admins manage checklists and settings. Requires [Prime](/plans).
+</Info>
+
+<Note>
+  **Screenshot needed:** The Inspections page showing a list of passed and failed inspections.
+</Note>
+
+## Inspection types
+
+| Type | Who does it | Notes |
+| --- | --- | --- |
+| **Pre-Trip** | Drivers, before driving | Can be turned on or off per map. |
+| **Post-Trip** | Drivers, after driving | Can be turned on or off per map. |
+| **Mechanic** | Mechanics | Can be linked to a [maintenance record](/fleet/maintenance-logs). A passing one resolves the record. |
+
+Turn pre-trip and post-trip inspections on or off for each map in its [map settings](/maps/manage-maps).
+
+## Checklists
+
+Each inspection type has its own checklist. New companies start with a default checklist for each type, which admins can change at any time.
+
+### Checklist items
+
+There are two kinds of checklist items:
+
+- **Regular items** are a single Pass or Fail, e.g. "Exterior Body Damage".
+- **Scanned items** stand for a physical tag on the bus, e.g. "Instrument Cluster". In game, the inspector scans the tag with the tablet, and its components pop up as their own Pass or Fail items, e.g. "Gauge Needles" and "Warning Lights". A scanned item passes when all its components pass.
+
+### Editing checklists
+
+<Steps>
+  <Step title="Open the editor">
+    As an admin, click **Edit Checklists** on the Inspections page and choose **Pre-Trip**, **Post-Trip**, or **Mechanic**.
+  </Step>
+  <Step title="Write the checklist">
+    Put one item per line, in the order inspectors should see them. To make a scanned item, put its components on the lines below it, each starting with a dash:
+
+    ```text
+    Exterior Body Damage
+    Instrument Cluster
+    - Gauge Needles
+    - Cluster Lights
+    - Warning Lights
+    Fuel Level
+    ```
+  </Step>
+  <Step title="Save">
+    Click **Save Checklist**. Switching to another type without saving discards your changes.
+  </Step>
+</Steps>
+
+<Warning>
+  The tag on the bus in game has to be named **exactly** like its scanned item. If you rename a scanned item, rename its tag on your bus models too.
+</Warning>
+
+Limits:
+
+- Up to 50 items per checklist.
+- Up to 25 components per scanned item.
+- Up to 100 characters per item or component.
+- Item names must be unique within a checklist, and component names must be unique within their item.
+
+Editing a checklist doesn't change past inspections. Each inspection keeps the checklist it was done with.
+
+<Note>
+  **Screenshot needed:** The Edit Checklists dialog with a checklist that includes a scanned item and its components.
+</Note>
+
+## Inspecting from the website
+
+Mechanics can file inspections on the website when an admin allows it.
+
+<Steps>
+  <Step title="Start an inspection">
+    Click **New Inspection**, then choose the **Bus** and the **Type**. Only the types turned on for that bus's map are offered. Mechanic inspections are always available.
+  </Step>
+  <Step title="Go through the checklist">
+    Mark every item **Pass** or **Fail**. Scanned items appear as a group with their components. For a failed item, describe what's wrong.
+
+    Optionally add the bus's **Mileage** and any **Notes**.
+  </Step>
+  <Step title="Sign off">
+    Click **Submit Inspection**. You'll be asked to confirm that you personally performed a full inspection of the bus, checked every item, and that your results are accurate. Click **Sign & Submit** to save it, or **Back** to change your answers.
+  </Step>
+</Steps>
+
+Website inspections can't scan tags, so signing off stands in for scanning them. Inspections done this way are marked "Signed off on the website instead of scanning tags" in the list.
+
+<Note>
+  **Screenshot needed:** The New Inspection dialog with a scanned item group, and the Sign Off Inspection prompt.
+</Note>
+
+### Website inspections
+
+Admins can stop inspections from being filed on the website with the **Website inspections** checkbox at the top of the Inspections page. When it's off:
+
+- **New Inspection** is disabled.
+- Maintenance records can't be resolved from the website with **Record Inspection**.
+- Inspections can only be done with the in-game tablet.
+
+## Inspecting in game
+
+<Info>
+  **Coming soon:** Drivers and mechanics will do inspections in game with a tablet. Drivers will do pre-trip and post-trip inspections, and mechanics will do mechanic inspections, including ones that resolve maintenance records. Regular items are checked off on the tablet, and scanned items are unlocked by scanning their tag on the bus.
+</Info>
+
+## Reviewing inspections
+
+Filter the list by type (**All**, **Pre-Trip**, **Post-Trip**, **Mechanic**) and by result (**Any result**, **Passed**, **Failed**), or search bus numbers and notes.
+
+Each inspection shows:
+
+- Whether it passed or failed, and how many items passed.
+- Every failed item, with the note left on it.
+- The maintenance issue it was for, if any.
+- Any notes, the inspector, and the mileage.
+
+Click **View Bus** to open the bus's page.
