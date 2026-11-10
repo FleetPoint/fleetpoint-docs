@@ -33,14 +33,56 @@ Change any of these and click **Save**.
 Requires Prime. A map image is a top-down picture of your map. The [Live Map View](/maps/live-map), [Fleet Replay](/fleet/replay), lots, routes, and points of interest all need it.
 
 <Steps>
+  <Step title="Render your map">
+    Make a top-down render of your map. We recommend RoRender, but any tool that produces a straight top-down image of your map works.
+
+    <Tabs>
+      <Tab title="RoRender V4 (paid)">
+        [RoRender V4](https://devforum.roblox.com/t/minimap-rorender-v4/3525559) is paid, with a few free renders each day. It renders meshes and supports images up to 7,000 × 7,000 pixels.
+
+        1. Install the [RoRender V4 plugin](https://create.roblox.com/store/asset/102372310431390/RoRender-V4) in Roblox Studio.
+        2. Sign in at [rorender.com](https://rorender.com) and click **Create Render** to get a pipeline ID.
+        3. In the plugin, press **Start Render** and paste in the pipeline ID.
+        4. Click **Auto Configure**, or resize the orange outline so it covers your whole map.
+        5. Press **Start Rendering**. Studio may say it's not responding while it works, so don't close it.
+        6. When it's done, download the image from **My Renders** on rorender.com.
+
+        See the [RoRender V4 documentation](https://devforum.roblox.com/t/ro-render-v4-documentation/3439638) for more detail.
+      </Tab>
+      <Tab title="RoRender V3 (free)">
+        [RoRender V3](https://devforum.roblox.com/t/minimap-render-rorenderv3/965827) is free, but no longer updated. It only renders part colours, not textures, and large maps can take hours.
+
+        1. Install the [RoRender V3 plugin](https://www.roblox.com/library/10546220005/RoRenderV3) and the [RoRender V3 app](https://github.com/AJSteinhauser/RoRenderV3/releases/tag/1.0). Windows and macOS may warn that the app is unsigned.
+        2. Allow HTTP requests by running this in Studio's command bar:
+
+           ```lua
+           game:GetService("HttpService").HttpEnabled = true
+           ```
+
+        3. Open the plugin, click **Create Settings**, then **Load Settings**.
+        4. Resize the purple box so it covers your map by dragging the spheres at its corners.
+        5. In the RoRender app, press **Start Server**.
+        6. In Studio, click the arrow under **Play** and press **Run**, so your character isn't in the render. Don't click around in Studio while it renders.
+        7. When it's done, press **Download Image** in the app to save the render as a PNG.
+      </Tab>
+    </Tabs>
+
+    <Tip>
+      Render from a saved copy of your place rather than your live game, and turn off StreamingEnabled so the whole map is loaded. Remove anything you don't want in the image, like invisible parts.
+    </Tip>
+  </Step>
   <Step title="Upload the image to Roblox">
-    Upload a top-down image of your map to Roblox as a public image, and copy its asset ID.
+    Upload the render to Roblox through the [Creator Hub](https://create.roblox.com/dashboard/creations) or Studio's Asset Manager. Once it passes moderation, copy its **image** ID.
+
+    <Warning>
+      Use the image's ID, not a decal ID. A decal ID won't load as a map image.
+    </Warning>
   </Step>
   <Step title="Enter the image ID">
-    Tick **Enabled** under Map Image, then paste the asset ID into **Image ID**.
+    Tick **Enabled** under Map Image, then paste the image ID into **Image ID**.
   </Step>
   <Step title="Set the bounds">
-    Enter the in-game X and Y coordinates of the image's top-left corner in **Top Left Corner Bounds**, and of its bottom-right corner in **Bottom Right Corner Bounds**.
+    Enter the in-game X and Z coordinates of the image's top-left corner in **Top Left Corner Bounds**, and of its bottom-right corner in **Bottom Right Corner Bounds**. Put the Z coordinate in the **Y Value** field. These are the corners of the area you rendered. In RoRender, the front of the render box is the top of the image.
   </Step>
   <Step title="Check the preview">
     The **Preview** shows your image with the bounds you entered, along with the map's lots. Adjust the bounds until it lines up, then click **Save**.

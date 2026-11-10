@@ -92,7 +92,7 @@
     "primary": {
       "type": "button",
       "label": "Dashboard",
-      "href": "https://fleetpointapp.com"
+      "href": "https://fleetpointapp.com/companies"
     }
   },
   "contextual": {
@@ -109,8 +109,8 @@
     }
   },
   "banner": {
-    "content": "WIP: FleetPoint is still under development, and these pages may change!",
-    "type": "warning"
+    "content": "FleetPoint is a new service, and documentation may change!",
+    "type": "info"
   },
   "errors": {
     "404": {
