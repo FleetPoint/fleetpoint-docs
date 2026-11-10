@@ -18,7 +18,7 @@ description: "Learn how to Connect your Roblox Game to FleetPoint."
     The GDK is how your Roblox Game connects with FleetPoint.
 
     <Info>
-      **Coming soon:** A download link for the GDK will be added here.
+      Download the GDK from your dashboard
     </Info>
 
     Once downloaded, import the file into RobloxStudio, and drop it in `ServerScriptService`.
@@ -62,7 +62,11 @@ description: "Learn how to Connect your Roblox Game to FleetPoint."
 
     The first, and most important one is the `MapId`. Ensure that is the correct Map ID, otherwise the GDK will throw an error when you start your game.
 
-    Next is the `RequireControlUnit` option. This is if you want to utilize the Control Unit in the buses. If so, you need to get the model and add it to the `Body` folder of your bus.
+    Next is the `EnableLocationTracking` option. This is if you want to utilize the live location tracking feature of FleetPoint. If so, you will need to ensure that company has subscribed to Prime.
+
+    Next is the `RequireControlUnit` option. This is if you want to utilize the Control Unit in the buses for live location tracking, and maintenance/inspections. If so, you need to get the model and add it to the `Body` folder of your bus.
+
+    Disabling this option will allow you to use the GDK without the Control Unit, but you will only be able to utilize live location tracking. Maintenance/inspections will be unavailable.
 
     <Info>
       MODEL COMING SOON! For now, just uncheck it.
